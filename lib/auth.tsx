@@ -49,7 +49,6 @@ export function AuthProvider(props: any) {
     useEffect(() => {
         const auth = getAuth();
         auth.onAuthStateChanged((user) => {
-            console.log("ran on auth state changed");
             setUser(user);
             setIsLoaded(true);
         });
